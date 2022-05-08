@@ -1,0 +1,54 @@
+{% extends 'main/dashboard_layout.html' %}
+
+{% block dashboard %}
+<div class="col-12 col-md-8 col-lg-9">
+    <div class="row mx-4">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="row p-2">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <span>Registration Date </span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <span>May 7, 2022, 3:23 p.m.</span>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <span>First Name</span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <span>{{user.first_name}}</span>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <span>Last Name</span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <span>{{user.last_name}}</span>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <span>Username</span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <span>{{user.username}}</span>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <span>Email</span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <span>{{user.email}}</span>
+                </div>
+            </div>
+            <br>
+            <a class="btn btn-primary edit-btn" href="#">Edit profile</a>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
+

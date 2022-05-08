@@ -1,0 +1,313 @@
+{% extends 'main/detail_layout.html' %}
+{% block detail %}
+
+        <style>
+            a.disabled {
+                color: gray;
+                pointer-events: none;
+                }
+            span.disabled{
+                color: gray;
+                pointer-events: none;
+            }
+        </style>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="card mb-4" style="width: 100%;">
+                        <div class="card-body">
+                            <iframe width="100%" height="400" frameborder="0" rel="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                src="https://www.youtube.com/embed/4lf8uUpzQI0?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0">
+                            </iframe>
+                            <hr>
+
+                                <h3>The course is {{program.price}}</h3>
+
+
+                            <h5>The course includes</h5>
+                            <strong class='text-primary'>
+                                <i style='font-size:20px ' class="bi bi-check text-primary"></i>
+                                Video, Quiz, PDF and Posts
+                            </strong>
+
+
+                        </div>
+                    </div>
+                    <div class="requirement-section mb-4">
+                        <h4>Requirements</h4>
+                        <p><i style='font-size:20px ' class="bi bi-check text-primary"></i>Nothing required</p>
+                    </div>
+                    <div class="for-whom-section">
+                        <h4>To Whom</h4>
+                        <p><i style='font-size:20px ' class="bi bi-check text-primary"></i>For Everyone</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <h6>
+                        <span class="text-muted">Overall Rating:</span> 000
+                        <span>
+
+                                (1)
+
+
+                        </span>
+                    </h6>
+                    <h1 class='text-primary text-center m-3'>{{program.name}}</h1> <br>
+
+                    <div class="course-detail">
+                        <div class="row">
+                            <div class="col-12 col-md-10 col-lg-4">
+                                <span class="text-muted">Teacher: </span> <b>{{program.owner.first_name}} {{program.owner.last_name}}</b>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-4 mb-2">
+                                <span class="text-muted">Difficulty:</span> <b>Easy</b>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-4 mb-2">
+                                <span class="text-muted">Share:</span>
+                                <a href=""><i style='font-size:20px' class="bi bi-facebook mr-1"></i></a>
+                                <a href=""><i style='font-size:20px' class="bi bi-twitter mr-1"></i></a>
+                                <a href=""><i style='font-size:20px' class="bi bi-linkedin mr-1"></i></a>
+                                <a href=""><i style='font-size:20px' class="bi bi-telegram mr-1"></i></a>
+                            </div>
+                            <hr style='width: 100%'>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-6 col-md-6 col-lg-3 ">
+                                <span class="text-muted">Category:</span><br> {{ program.name }}
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-3">
+                                <span class="text-muted">Duration:</span><br> z
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <span class="text-muted">Number of Students: <br>
+                                <span class=text-dark>{{program.students_purchased.count}}</span></b>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <span class="text-muted">Last Update: </span><br> ---
+                            </div>
+                            <hr style='width: 900px'>
+                        </div>
+
+                        <div class="row">
+                            <h3>What will you learn during the course?</h3>
+                            <p><i style='font-size:30px' class="bi bi-check text-primary"></i>---</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-8 col-md-6">
+                                <h3>Course content</h3>
+                            </div>
+                            <div class="col-6 col-md-3 mt-2">
+                                <span class="text-muted">Lectures</span> <strong>3</strong>
+                            </div>
+                            <div class="col-6 col-md-3 mt-2">
+                                <span class="text-muted">Duration</span> <strong>0h 59m</strong>
+                            </div>
+
+
+                            <div class="col-12">
+
+                                    <div class="accordion" id="accordionExample">
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne17">
+
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne17" aria-expanded="true" aria-controls="collapseOne17">
+                                                {{program.name}}
+                                            </button>
+                                            </h2>
+
+                                            <div id="collapseOne17" class="accordion-collapse collapse" aria-labelledby="headingOne17" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                        ------
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>16:13
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                       ------
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>19:08
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                        ----
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>23:53
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    ------
+                                    <div class="accordion" id="accordionExample">
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne17">
+
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne17" aria-expanded="true" aria-controls="collapseOne17">
+                                                Git Tizimi
+                                            </button>
+                                            </h2>
+
+                                            <div id="collapseOne17" class="accordion-collapse collapse" aria-labelledby="headingOne17" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                        1 - Versiya boshqaruv tizimlari va git …
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>16:13
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                        2 - Git bilan ishlashni boshlaymiz
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>19:08
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+
+                                                            <div class="row ">
+                                                                <div class="col-8 col-md-9 col-lg-10">
+                                                                    <a class='text-decoration-none disabled' href="/watch-course/git-version-control/">
+                                                                        <i style='font-size: 20px;' class="bi bi-play-circle"></i>
+                                                                        3 - Git bilan amaliy mashg’ulot
+                                                                    </a><br><br>
+                                                                </div>
+                                                                <div class="col-4 col-md-3 col-lg-2">
+                                                                    <span class='disabled'>23:53
+                                                                        <i class="bi bi-lock"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 mx-1">
+
+                            <h3>About The Instructor</h3>
+                            <div class="card">
+                                <div class="card-body">
+
+                                        <a class='text-decoration-none'>
+                                            <img style='width:40px; height:40px; border-radius:50%'
+                                                src="/media/users/farxod-d.jpg" alt="">
+                                            <b>{{program.owner.first_name}} {{program.owner.last_name}} </b>
+                                        </a>
+
+                                    <hr>
+                                </div>
+                                <div class="row">
+
+
+                                    <div class="col-6 col-md-6 col-lg-3">
+                                        <i style='font-size: 30px' class="bi bi-person"></i>
+
+                                            {{program.students_purchased.count}}
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+{% endblock %}

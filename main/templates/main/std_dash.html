@@ -1,0 +1,16 @@
+{% extends 'main/dashboard_layout.html' %}
+{% block dashboard %}
+{% for program in student.purchased_programs.all %}
+        <tbody>
+            <th scope="row">1</th>
+                <td class='col-12 col-md-12 col-lg-12'>
+                    <a class='text-decoration-none' 
+                        href="{% url 'detail' program.id %}">{{ program.name }}
+                    </a>
+                </td>
+                
+            </tr>
+        </tbody>
+        
+    {% endfor %}
+{% endblock  %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if message %}
+{{message}}
+{% endif %}
+
+
+{% for author in authors %}
+<ol>
+    <li>{{author.t_user.first_name}} {{author.t_user.last_name}}</li>
+    <li><a href="{% url 'confirm_author' author.t_user.id %}">Confirm</a></li>
+    <li><a href="{% url 'decline_author' author.t_user.id %}">Delete</a></li>
+</ol>
+{% endfor %}
+</body>
+</html>
+

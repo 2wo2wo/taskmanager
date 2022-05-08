@@ -1,0 +1,34 @@
+{% extends 'main/dashboard_layout.html' %}
+{% block dashboard %}
+
+<table class='table table-bordered'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course Name</th>
+            
+        </tr>
+    </thead>
+    {% for  program in programs %}
+        <tbody>
+            <th scope="row">1</th>
+                <td class='col-12 col-md-12 col-lg-12'>
+                    <a class='text-decoration-none' 
+                        href="#">{{program.name}}
+                    </a>
+                    <p>Number of students - {{ program.students_purchased.count }}</p>
+                </td>
+                
+            </tr>
+        </tbody>
+        
+    {% endfor %}
+
+</table>
+
+    <ol>
+        {% for student in program.students_purchased.all %}
+        <li>{{ student.first_name }} {{ student.last_name }}</li>
+        {% endfor %}
+    </ol>
+{% endblock  %}
